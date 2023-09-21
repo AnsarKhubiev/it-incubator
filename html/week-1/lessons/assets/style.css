@@ -12,7 +12,8 @@ section {
 }
 
 .card {
-    width: 1170px;
+    margin: 0 auto;
+    max-width: 1170px;
     height: 800px;
     background: #FFF;
     box-shadow: 20px 20px 40px 0px rgba(81, 91, 117, 0.25);
@@ -44,7 +45,7 @@ section {
 
 .product-info-block {
     width: 630px;
-    margin: 60px 60px 80px;
+    padding: 60px 60px 80px;
 }
 
 .main-title {
@@ -72,6 +73,7 @@ section {
     font-weight: 400;
     line-height: 30px;
     letter-spacing: 0.18px;
+    margin-bottom: 65px;
 }
 
 .title {
@@ -130,6 +132,12 @@ section {
 
 .colors{
     margin-bottom: 65px;
+}
+
+.priceAndQuantity {
+    display: flex;
+    margin-right: 153px;
+    justify-content: space-between;
 }
 
 .quantity {
