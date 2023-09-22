@@ -59,19 +59,49 @@
 
 // giveMeResult("Sunday");
 
-const isInRange = (numb = 13) => {
-    switch (true) {
-        case numb >= 10 && numb <= 20:
-            console.log(numb, true);
-            break;
-        case numb === 0 || numb === 100:
-            console.log(numb, true);
-            break;
-        default:
-            console.log(false)
-    }
+// const isInRange = (numb = 13) => {
+//     switch (true) {
+//         case numb >= 10 && numb <= 20:
+//             console.log(numb, true);
+//             break;
+//         case numb === 0 || numb === 100:
+//             console.log(numb, true);
+//             break;
+//         default:
+//             console.log(false)
+//     }
+// };
+
+// isInRange();
+
+// const user = {
+//     name: "Igor",
+//     age: 30,
+// };
+
+// const user2 = { ...user, name: "Ansar", lastName: "Khubiev" };
+
+// const user2 = user;
+
+// console.log(user2);
+// console.log(user);
+
+// user.name = "Ansar";
+
+// console.log(user2);
+
+let prep = {
+    name: "Igor",
+    sizes: {
+        height: 177,
+        weight: 80,
+    },
 };
 
-isInRange();
+let prep2 = {...prep, sizes: {...prep.sizes}}
 
+prep2.name = "Yulia";
 
+prep2.sizes.weight = 50;
+console.log("prep2:", prep2)
+console.log("prep:", prep)
