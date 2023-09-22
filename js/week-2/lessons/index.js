@@ -90,18 +90,36 @@
 
 // console.log(user2);
 
-let prep = {
+// let prep = {
+//     name: "Igor",
+//     sizes: {
+//         height: 177,
+//         weight: 80,
+//     },
+// };
+
+// let prep2 = { ...prep, sizes: { ...prep.sizes } };
+
+// prep2.name = "Yulia";
+
+// prep2.sizes.weight = 50;
+// console.log("prep2:", prep2);
+// console.log("prep:", prep);
+
+const prep = {
     name: "Igor",
     sizes: {
         height: 177,
         weight: 80,
-    },
+    }
 };
 
-let prep2 = {...prep, sizes: {...prep.sizes}}
+const copyPred = (obj) => {
+    return { ...obj, sizes: {...prep.sizes}, isMarried: true };
+};
 
-prep2.name = "Yulia";
+console.log(copyPred(prep));
 
-prep2.sizes.weight = 50;
-console.log("prep2:", prep2)
-console.log("prep:", prep)
+prep.sizes.isMarried = true;
+console.log(prep);
+console.log(copyPred());
