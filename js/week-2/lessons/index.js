@@ -38,24 +38,40 @@
 
 // isPositive(5);
 
-const giveMeResult = (day) => {
-    if (day === "Saturday" || day === "Sunday") {
+// const giveMeResult = (day) => {
+//     if (day === "Saturday" || day === "Sunday") {
+//         dayOfWeek = "dayOff";
+//     } else {
+//         dayOfWeek = "weekday";
+//     }
 
-        dayOfWeek = "dayOff";
-    } else {
-        dayOfWeek = "weekday";
-    }
+//     switch (dayOfWeek) {
+//         case "weekday":
+//             console.log("Будний день");
+//             break;
+//         case "dayOff":
+//             console.log("Выходной день");
+//             break;
+//         default:
+//             console.log("Некоректное значение дня недели");
+//     }
+// };
 
-    switch (dayOfWeek) {
-        case "weekday":
-            console.log("Будний день");
+// giveMeResult("Sunday");
+
+const isInRange = (numb = 13) => {
+    switch (true) {
+        case numb >= 10 && numb <= 20:
+            console.log(numb, true);
             break;
-        case "dayOff":
-            console.log("Выходной день");
+        case numb === 0 || numb === 100:
+            console.log(numb, true);
             break;
-        // default:
-            // console.log("Некоректное значение дня недели");
+        default:
+            console.log(false)
     }
 };
 
-giveMeResult("Sunday");
+isInRange();
+
+
