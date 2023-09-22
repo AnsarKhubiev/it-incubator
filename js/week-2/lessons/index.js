@@ -4,38 +4,58 @@
 
 // showMe("Hellow", 1223);
 
-function showMe(val = "Hellow Yullia") {
-    console.log(val);
-}
+// function showMe(val = "Hellow Yullia") {
+//     console.log(val);
+// }
 
-showMe("Hellow Jenya");
+// showMe("Hellow Jenya");
 
-const showMe2 = (val = "Hellow Yullia") => {
-    console.log(val);
-};
+// const showMe2 = (val = "Hellow Yullia") => {
+//     console.log(val);
+// };
 
-showMe2();
+// showMe2();
 
-const sum = (numb1, numb2) => {
-    console.log(numb1 + numb2);
-};
+// const sum = (numb1, numb2) => {
+//     console.log(numb1 + numb2);
+// };
 
-sum(100, 200);
+// sum(100, 200);
 
-const sum2 = (numb1, numb2) => console.log(numb1 + numb2);
+// const sum2 = (numb1, numb2) => console.log(numb1 + numb2);
 
-const sum3 = numb2 => console.log(numb2);
+// const sum3 = (numb2) => console.log(numb2);
 
-sum3(100);
+// sum3(100);
 
+// const isPositive = (numb) => {
+//     if (numb >= 0) {
+//         console.log(true);
+//     } else {
+//         console.log(false);
+//     }
+// };
 
-const isPositive = numb => {
-    if (numb >= 0) {
-        console.log(true);
+// isPositive(5);
+
+const giveMeResult = (day) => {
+    if (day === "Saturday" || day === "Sunday") {
+
+        dayOfWeek = "dayOff";
     } else {
-        console.log(false);
-    };
+        dayOfWeek = "weekday";
+    }
+
+    switch (dayOfWeek) {
+        case "weekday":
+            console.log("Будний день");
+            break;
+        case "dayOff":
+            console.log("Выходной день");
+            break;
+        // default:
+            // console.log("Некоректное значение дня недели");
+    }
 };
 
-isPositive(5);
-
+giveMeResult("Sunday");
