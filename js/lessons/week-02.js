@@ -1,6 +1,6 @@
 // function showMe(value, number) {
-//    console.log(value, number);
-// };
+//     console.log(value, number);
+// }
 
 // showMe("Hellow", 1223);
 
@@ -16,6 +16,8 @@
 
 // showMe2();
 
+//----------------------------------------------------------------------
+
 // const sum = (numb1, numb2) => {
 //     console.log(numb1 + numb2);
 // };
@@ -28,18 +30,18 @@
 
 // sum3(100);
 
+//-----------------------------------------------------------------------
+
 // const isPositive = (numb) => {
-//     if (numb >= 0) {
-//         console.log(true);
-//     } else {
-//         console.log(false);
-//     }
+//     numb > 0 ? console.log(true) : console.log(false);
 // };
 
 // isPositive(5);
 
-// const giveMeResult = (day) => {
-//     if (day === "Saturday" || day === "Sunday") {
+//-----------------------------------------------------------------------
+
+// const giveMeResult = (dayOfWeek) => {
+//     if (dayOfWeek === "Saturday" || dayOfWeek === "Sunday") {
 //         dayOfWeek = "dayOff";
 //     } else {
 //         dayOfWeek = "weekday";
@@ -59,20 +61,21 @@
 
 // giveMeResult("Sunday");
 
-// const isInRange = (numb = 13) => {
+//------------------------------------------------------------------
+
+// const isInRange = (num) => {
 //     switch (true) {
-//         case numb >= 10 && numb <= 20:
-//             console.log(numb, true);
-//             break;
-//         case numb === 0 || numb === 100:
-//             console.log(numb, true);
+//         case (num >= 10 && num <= 20) || num === 0 || num === 100:
+//             console.log(true);
 //             break;
 //         default:
-//             console.log(false)
+//             console.log(false);
 //     }
 // };
 
-// isInRange();
+// isInRange(100);
+
+//---------------------------------------------------------------------------
 
 // const user = {
 //     name: "Igor",
@@ -83,12 +86,7 @@
 
 // const user2 = user;
 
-// console.log(user2);
-// console.log(user);
-
 // user.name = "Ansar";
-
-// console.log(user2);
 
 // let prep = {
 //     name: "Igor",
@@ -106,20 +104,18 @@
 // console.log("prep2:", prep2);
 // console.log("prep:", prep);
 
-// const prep = {
-//     name: "Igor",
-//     sizes: {
-//         height: 177,
-//         weight: 80,
-//     }
-// };
+//----------------------------------------------------------------------
 
-// const copyPred = (obj) => {
-//     return { ...obj, sizes: {...prep.sizes}, isMarried: true };
-// };
+const prep = {
+    name: "Igor",
+    sizes: {
+        height: 177,
+        weight: 80,
+    },
+};
 
-// console.log(copyPred(prep));
+const copyPrep = (user) => {
+    return { ...user, sizes: { ...prep.sizes }, isMarried: true };
+};
 
-// prep.sizes.isMarried = true;
-// console.log(prep);
-// console.log(copyPred());
+console.log(copyPrep(prep));
