@@ -106,20 +106,20 @@
 // console.log("prep2:", prep2);
 // console.log("prep:", prep);
 
-const prep = {
-    name: "Igor",
-    sizes: {
-        height: 177,
-        weight: 80,
-    }
-};
+// const prep = {
+//     name: "Igor",
+//     sizes: {
+//         height: 177,
+//         weight: 80,
+//     }
+// };
 
-const copyPred = (obj) => {
-    return { ...obj, sizes: {...prep.sizes}, isMarried: true };
-};
+// const copyPred = (obj) => {
+//     return { ...obj, sizes: {...prep.sizes}, isMarried: true };
+// };
 
-console.log(copyPred(prep));
+// console.log(copyPred(prep));
 
-prep.sizes.isMarried = true;
-console.log(prep);
-console.log(copyPred());
+// prep.sizes.isMarried = true;
+// console.log(prep);
+// console.log(copyPred());
