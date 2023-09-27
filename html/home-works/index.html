@@ -91,16 +91,19 @@
             <input type="text" placeholder="Full Name*">
             <input type="email" placeholder="Email*">
             <input type="password" placeholder="Password*">
-            <input type="text" onfocus="(this.type = 'date')" placeholder="Day of Birth">
+            <input type="date">
+            <!-- <input type="text" onfocus="(this.type = 'date')" placeholder="Day of Birth"> -->
             <select>
                <option selected disabled>Country</option>
                <option value="Turkey">Turkey</option>
                <option value="USA">USA</option>
             </select>
-
-            <label for="front"><input type="radio" name="stack" id="front"></label>
-            <label for="back"><input type="radio" name="stack" id="back"></label>
-
+            
+            <div>
+               <label for="front"><input type="radio" name="stack" id="front"></label>
+               <label for="back"><input type="radio" name="stack" id="back"></label>
+            </div>
+            
             <fieldset>
                <legend>Favorite Technologies</legend>
                <label for="html">
@@ -128,8 +131,8 @@
       <input type="submit" value="registration">
    </section>
 
-   <footer>
-      <span>Copyright © 2023. All rights reserved.</span>
+   <footer class="footer">
+      <span class="small">Copyright © 2023. All rights reserved.</span>
    </footer>
 </body>
 
