@@ -106,16 +106,16 @@
 
 //----------------------------------------------------------------------
 
-const prep = {
-    name: "Igor",
-    sizes: {
-        height: 177,
-        weight: 80,
-    },
-};
+// const prep = {
+//     name: "Igor",
+//     sizes: {
+//         height: 177,
+//         weight: 80,
+//     },
+// };
 
-const copyPrep = (user) => {
-    return { ...user, sizes: { ...prep.sizes }, isMarried: true };
-};
+// const copyPrep = (user) => {
+//     return { ...user, sizes: { ...prep.sizes }, isMarried: true };
+// };
 
-console.log(copyPrep(prep));
+// console.log(copyPrep(prep));
