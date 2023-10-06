@@ -9,11 +9,12 @@ section {
     height: 100vh;
     background: #EFF2F9;
     padding: 112px 0;
+    display: flex;
+    justify-content: center;
 }
 
 .card {
     display: flex;
-    margin: 0 auto;
     max-width: 1170px;
     height: 800px;
     background: #FFF;
@@ -45,15 +46,18 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    transition-duration: .2s;
 }
 
-.selected {
+.selected,
+.preview:hover {
     box-shadow: 8px 8px 16px 0px rgba(81, 91, 117, 0.25);
-    
 }
+
+/* =======Стили для правой части */
 
 .product-info-block {
-    /* width: 630px; */
     padding: 60px 60px 80px;
 }
 
@@ -72,7 +76,6 @@ section {
     font-size: 16px;
     font-weight: 400;
     letter-spacing: 0.16px;
-    display: block;
     margin-bottom: 60px;
 }
 
@@ -82,7 +85,7 @@ section {
     font-weight: 400;
     line-height: 30px;
     letter-spacing: 0.18px;
-    margin-bottom: 65px;
+    margin: 65px 0;
 }
 
 .title {
@@ -96,11 +99,12 @@ section {
 
 }
 
-.color-list{
+.color-items {
     display: flex;
     gap: 40px;
     list-style: none;
     align-items: center;
+
 }
 
 .circle {
@@ -109,16 +113,23 @@ section {
     flex-shrink: 0;
     border-radius: 50%;
     filter: drop-shadow(2px 2px 4px rgba(81, 91, 117, 0.25));
+
 }
 
-.color-selected {
+.color-items>li {
     width: 30px;
     height: 30px;
-    box-shadow: 8px 8px 16px 0px rgba(81, 91, 117, 0.25);
-    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition-duration: .2s;
+}
+
+.color-selected,
+.color-items>li:hover {
+    box-shadow: 1px 1px 5px 2px rgb(76 80 93 / 47%);
 }
 
 .blue {
@@ -141,7 +152,7 @@ section {
     background-color: #F2C723;
 }
 
-.colors{
+.colors {
     margin-bottom: 65px;
 }
 
@@ -162,10 +173,8 @@ section {
     font-weight: 500;
     letter-spacing: 0.2px;
     appearance: none;
-    /* background-image: url("select-arel.svg");
-    background-repeat: no-repeat;
-    background-position: right 0 top 50%; */
     background: no-repeat url("select-arel.svg") right 0 top 50%;
+    cursor: pointer;
 }
 
 .price {
@@ -184,4 +193,12 @@ section {
     font-size: 18px;
     font-weight: 500;
     letter-spacing: 0.18px;
+    cursor: pointer;
+    transition: transform .2s;
+    border-style: none;
+}
+
+.btn:hover {
+    transform: skewX(15deg);
+    background-color: #054de7;
 }
