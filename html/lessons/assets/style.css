@@ -2,29 +2,25 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Rubik, sans-serif;
 }
 
-section {
-    height: 100vh;
-    background: #EFF2F9;
-    padding: 112px 0;
+body {
+    font-family: Rubik;
+}
+
+.card {
+    width: 1170px;
+    height: 800px;
+    background: #FFF;
+    box-shadow: 20px 20px 40px 0px rgba(81, 91, 117, 0.25);
     display: flex;
     justify-content: center;
 }
 
-.card {
-    display: flex;
-    max-width: 1170px;
-    height: 800px;
-    background: #FFF;
-    box-shadow: 20px 20px 40px 0px rgba(81, 91, 117, 0.25);
-}
+/* =======левая сторона================ */
 
 .product-image-block {
     min-width: 540px;
-    border-right: 2px solid rgba(20, 20, 20, 0.15);
-    margin: 60px 0px 70px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,11 +34,13 @@ section {
 .previews-block {
     display: flex;
     gap: 60px;
+    margin-bottom: 70px;
 }
 
 .preview {
     width: 80px;
     height: 80px;
+    background: #FFF;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,33 +48,34 @@ section {
     transition-duration: .2s;
 }
 
-.selected,
+.preview.selected,
 .preview:hover {
     box-shadow: 8px 8px 16px 0px rgba(81, 91, 117, 0.25);
 }
 
-/* =======Стили для правой части */
+/* =======правая сторона================ */
 
 .product-info-block {
-    padding: 60px 60px 80px;
+    max-width: 630px;
+    padding: 60px 60px 80px 60px;
+    border-left: solid 2px #14141426;
+
 }
 
 .main-title {
     color: rgba(20, 20, 20, 0.90);
-    font-family: Montserrat, sans-serif;
+    font-family: Montserrat;
     font-size: 38px;
     font-weight: 700;
     letter-spacing: 0.38px;
-    margin-bottom: 5px;
+    padding-bottom: 5px;
 }
 
 .subtitle {
     color: rgba(20, 20, 20, 0.40);
-    font-family: Lato, sans-serif;
+    font-family: Lato;
     font-size: 16px;
-    font-weight: 400;
     letter-spacing: 0.16px;
-    margin-bottom: 60px;
 }
 
 .main-text {
@@ -85,46 +84,42 @@ section {
     font-weight: 400;
     line-height: 30px;
     letter-spacing: 0.18px;
-    margin: 65px 0;
+    padding: 60px 0;
 }
 
 .title {
     color: rgba(20, 20, 20, 0.40);
-    font-family: Lato, sans-serif;
+    font-family: Lato;
     font-size: 16px;
     font-weight: 400;
     letter-spacing: 0.16px;
     text-transform: uppercase;
-    margin-bottom: 22px;
-
+    padding-bottom: 20px;
 }
 
 .color-items {
-    display: flex;
-    gap: 40px;
     list-style: none;
-    align-items: center;
-
-}
-
-.circle {
-    width: 16px;
-    height: 16px;
-    flex-shrink: 0;
-    border-radius: 50%;
-    filter: drop-shadow(2px 2px 4px rgba(81, 91, 117, 0.25));
-
+    display: flex;
+    gap: 26px;
+    padding-bottom: 65px;
 }
 
 .color-items>li {
     width: 30px;
     height: 30px;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
     cursor: pointer;
-    transition-duration: .2s;
+    transition-duration: .3s;
+}
+
+.circle {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    filter: drop-shadow(2px 2px 4px rgba(81, 91, 117, 0.25));
 }
 
 .color-selected,
@@ -152,20 +147,17 @@ section {
     background-color: #F2C723;
 }
 
-.colors {
-    margin-bottom: 65px;
-}
-
 .priceAndQuantity {
     display: flex;
-    margin-bottom: 75px;
+    padding-bottom: 75px;
 }
 
-.priceAndQuantity-wrapper {
+.priceAndQuantity>div {
     flex-grow: 1;
 }
 
 .quantity {
+    font-family: inherit;
     border: none;
     width: 80px;
     color: rgba(20, 20, 20, 0.80);
@@ -174,7 +166,10 @@ section {
     letter-spacing: 0.2px;
     appearance: none;
     background: no-repeat url("select-arel.svg") right 0 top 50%;
-    cursor: pointer;
+}
+
+.quantity:focus {
+    outline: none;
 }
 
 .price {
@@ -194,11 +189,9 @@ section {
     font-weight: 500;
     letter-spacing: 0.18px;
     cursor: pointer;
-    transition: transform .2s;
-    border-style: none;
+    border: none;
 }
 
 .btn:hover {
-    transform: skewX(15deg);
-    background-color: #054de7;
+    background-color: #0856a8;
 }
