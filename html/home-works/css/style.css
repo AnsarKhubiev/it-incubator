@@ -4,29 +4,18 @@
    box-sizing: border-box;
 }
 
-a {
-   text-decoration: none;
-}
-
-ul {
-   list-style: none;
-}
-
-button {
-   border: none;
-   background-color: transparent;
-}
-
 body {
    font-family: 'rubik', sans-serif;
    font-style: normal;
 }
 
-header {
-   background-color: #0A61F7;
-   height: 76px;
-   width: 1400px;
-   padding: 14px 0;
+.container {
+   height: 100%;
+   width: 100%;
+   max-width: 1170px;
+   padding: 0 15px;
+   margin: 0 auto;
+   border: 1px solid red;
 }
 
 .title {
@@ -43,13 +32,45 @@ header {
    line-height: 22px;
 }
 
+/* =====================стили для header=========================== */
+
+.header {
+   background-color: #0A61F7;
+   padding: 14px 0;
+}
+
+.header-wrapper {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.menu {
+   display: flex;
+   gap: 24px;
+}
+
 .menu-link {
+   list-style: none;
+}
+
+.menu-link a {
+   text-decoration: none;
    color: #FFF;
    font-size: 12px;
    font-weight: 500;
    line-height: 20px;
    letter-spacing: 1.4px;
    text-transform: uppercase;
+}
+
+/* =====================стили для main=========================== */
+
+.main-wrapper {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   height: 800px;
 }
 
 .main-title {
@@ -59,10 +80,16 @@ header {
 }
 
 .main .text {
-   margin: 0 0 40px;
+   width: 380px;
+   margin-bottom: 40px;
+}
+
+.main-img {
+   align-self: flex-end;
 }
 
 .button {
+   border: none;
    border-radius: 4px;
    background-color: #0A61F7;
    width: 152px;
@@ -76,9 +103,17 @@ header {
    text-transform: uppercase;
 }
 
+/* =====================стили для rates=========================== */
+
 .rates-section {
    padding: 100px 0 0;
    background: #F9FAFC;
+}
+
+.rates-wrapper {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
 }
 
 .rates-section .title {
@@ -126,6 +161,7 @@ td {
 
 .table-link {
    color: #0A61F7;
+   text-decoration: none;
 }
 
 .table-button {
@@ -139,6 +175,7 @@ td {
    line-height: 19.6px;
    letter-spacing: 1.4px;
    text-transform: uppercase;
+   text-decoration: none;
 }
 
 .table-button.active {
@@ -146,22 +183,42 @@ td {
    color: #FFF;
 }
 
+/* =====================стили для create-account=========================== */
+
+
 .create-account-section {
    padding: 100px 0 0;
+}
+
+.account-wrapper {
+   display: flex;
+   justify-content: space-between;
+}
+
+.account-info-wrapper {
+   display: flex;
+   flex-direction: column;
+   max-width: 500px;
 }
 
 .create-account-section .title {
    margin-bottom: 50px;
 }
 
-.create-account-section .text {
-   max-width: 500px;
-}
+.create-account-section .text {}
 
 .list-item {
    list-style-image: url('../assets/images/checked.svg');
    color: #363940;
    margin: 0 15px 0 30px;
+}
+
+form {
+   width: 100%;
+   max-width: 500px;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
 }
 
 input,
@@ -205,6 +262,12 @@ select {
 fieldset {
    width: 100%;
    padding: 30px 15px;
+}
+
+.stack,
+.fieldset {
+   display: flex;
+   gap: 30px;
 }
 
 textarea {
