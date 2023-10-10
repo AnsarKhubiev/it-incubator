@@ -1,21 +1,49 @@
+/* ================ Сбросс стилей ================ */
+
 * {
    padding: 0;
    margin: 0;
    box-sizing: border-box;
 }
 
+/* ================ Общие стили ================ */
+
+html,
 body {
    font-family: 'rubik', sans-serif;
    font-style: normal;
 }
 
-.container {
-   height: 100%;
-   width: 100%;
-   max-width: 1170px;
-   padding: 0 15px;
-   margin: 0 auto;
-   border: 1px solid red;
+a {
+   text-decoration: none;
+}
+
+a:hover {
+   text-decoration: underline;
+}
+
+ul {
+   list-style: none;
+}
+
+button {
+   border: none;
+   border-radius: 4px;
+   background-color: #0A61F7;
+   height: 50px;
+   color: #FFF;
+   text-align: center;
+   font-size: 14px;
+   font-weight: 500;
+   line-height: 19.6px;
+   letter-spacing: 1.4px;
+   text-transform: uppercase;
+   cursor: pointer;
+   transition: 0.2s;
+}
+
+button:hover {
+   transform: translateY(-5px);
 }
 
 .title {
@@ -30,6 +58,15 @@ body {
    font-size: 16px;
    font-weight: 400;
    line-height: 22px;
+}
+
+.container {
+   height: 100%;
+   width: 100%;
+   max-width: 1170px;
+   padding: 0 15px;
+   margin: 0 auto;
+   border: 1px solid red;
 }
 
 /* =====================стили для header=========================== */
@@ -50,12 +87,7 @@ body {
    gap: 24px;
 }
 
-.menu-link {
-   list-style: none;
-}
-
 .menu-link a {
-   text-decoration: none;
    color: #FFF;
    font-size: 12px;
    font-weight: 500;
@@ -74,13 +106,15 @@ body {
 }
 
 .main-title {
+   color: #363940;
    font-size: 58px;
+   font-weight: 500;
    line-height: 68px;
    margin: 0 0 30px;
 }
 
 .main .text {
-   width: 380px;
+   max-width: 380px;
    margin-bottom: 40px;
 }
 
@@ -88,26 +122,15 @@ body {
    align-self: flex-end;
 }
 
-.button {
-   border: none;
-   border-radius: 4px;
-   background-color: #0A61F7;
+.main-button {
    width: 152px;
-   height: 50px;
-   color: #FFF;
-   text-align: center;
-   font-size: 14px;
-   font-weight: 500;
-   line-height: 19.6px;
-   letter-spacing: 1.4px;
-   text-transform: uppercase;
 }
 
 /* =====================стили для rates=========================== */
 
 .rates-section {
    padding: 100px 0 0;
-   background: #F9FAFC;
+   background-color: #F9FAFC;
 }
 
 .rates-wrapper {
@@ -144,6 +167,7 @@ td {
 }
 
 .table-subtitle {
+   color: #363940;
    font-size: 14px;
    font-weight: 400;
    line-height: 22px;
@@ -161,7 +185,6 @@ td {
 
 .table-link {
    color: #0A61F7;
-   text-decoration: none;
 }
 
 .table-button {
@@ -175,7 +198,6 @@ td {
    line-height: 19.6px;
    letter-spacing: 1.4px;
    text-transform: uppercase;
-   text-decoration: none;
 }
 
 .table-button.active {
@@ -185,9 +207,8 @@ td {
 
 /* =====================стили для create-account=========================== */
 
-
 .create-account-section {
-   padding: 100px 0 0;
+   padding: 100px 0;
 }
 
 .account-wrapper {
@@ -195,22 +216,16 @@ td {
    justify-content: space-between;
 }
 
-.account-info-wrapper {
-   display: flex;
-   flex-direction: column;
+.create-account-section .text {
+   padding: 50px 0 40px;
    max-width: 500px;
 }
-
-.create-account-section .title {
-   margin-bottom: 50px;
-}
-
-.create-account-section .text {}
 
 .list-item {
    list-style-image: url('../assets/images/checked.svg');
    color: #363940;
-   margin: 0 15px 0 30px;
+   margin-left: 30px;
+   margin-bottom: 15px
 }
 
 form {
@@ -219,6 +234,15 @@ form {
    display: flex;
    flex-direction: column;
    gap: 20px;
+}
+
+input,
+select,
+fieldset,
+textarea {
+   border-radius: 4px;
+   border: 1px solid #95A1BB;
+   padding: 14px 15px;
 }
 
 input,
@@ -247,16 +271,26 @@ input[type='date'],
 select {
    width: 230px;
    height: 50px;
+   flex-grow: 1;
 }
 
-
-input[type='date'] {
-   background: url(../assets/images/calendar.svg) no-repeat right 3px top 50%;
-}
-
+input[type='date'],
+input[type='checkbox'],
+input[type='radio'],
 select {
-   background: url('../assets/images/arrow-down.svg') no-repeat right 15px top 50%;
-   appearance: none;
+   cursor: pointer;
+}
+
+.stack,
+fieldset {
+   display: flex;
+   gap: 30px;
+}
+
+.fields-wrapper {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
 }
 
 fieldset {
@@ -264,24 +298,29 @@ fieldset {
    padding: 30px 15px;
 }
 
-.stack,
-.fieldset {
-   display: flex;
-   gap: 30px;
-}
-
 textarea {
    width: 100%;
-   min-height: 80px;
+   height: 80px;
    resize: none;
 }
 
-form .button {
-   width: 100%;
+select {
+   background: url('../assets/images/arrow-down.svg') no-repeat right 15px top 50%;
+   appearance: none;
 }
 
+input[type='date'] {
+   background: url(../assets/images/calendar.svg) no-repeat right 15px top 50%;
+}
+
+input::-webkit-calendar-picker-indicator {
+   background: transparent;
+}
+
+/* ================ Стили для футера ================ */
+
 .footer {
-   background: #0A61F7;
+   background-color: #0A61F7;
    text-align: center;
    padding: 20px 0;
 }

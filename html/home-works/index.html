@@ -40,7 +40,7 @@
             <div class="main-info">
                <h1 class="main-title">Markup achievement</h1>
                <p class="text">The harder you work for something, the greater you’ll feel when you achieve it.</p>
-               <button class="button">Learn More</button>
+               <button class="main-button">Learn More</button>
             </div>
             <div class="main-img">
                <img class="main-img" src="assets/images/image.png" alt="image">
@@ -114,19 +114,19 @@
             </div>
 
             <form class="form">
-               <input type="text" placeholder="Full Name*">
-               <input type="email" placeholder="Email*">
-               <input type="password" placeholder="Password*">
-               <input type="date">
-               <!-- <input type="text" onfocus="(this.type = 'date')" placeholder="Day of Birth"> -->
-               <select>
-                  <option selected disabled>Country</option>
-                  <option value="Turkey">Turkey</option>
-                  <option value="USA">USA</option>
-               </select>
-
+               <div class="fields-wrapper">
+                  <input type="text" placeholder="Full Name*">
+                  <input type="email" placeholder="Email*">
+                  <input type="password" placeholder="Password*">
+                  <input type="date">
+                  <select>
+                     <option selected disabled>Country</option>
+                     <option value="Turkey">Turkey</option>
+                     <option value="USA">USA</option>
+                  </select>
+               </div>
                <div class="stack">
-                  <label for="front"><input type="radio" name="stack" id="front"> Frontend</label>
+                  <label for="front"><input type="radio" name="stack" id="front" checked> Frontend</label>
                   <label for="back"><input type="radio" name="stack" id="back"> Backend</label>
                </div>
 
@@ -153,7 +153,7 @@
                <textarea name="aboutPerson" id="aboutPerson" cols="30" rows="10"
                   placeholder="Something else about you...">
                </textarea>
-               <input type="submit" value="registration">
+               <button type="submit">registration</button>
             </form>
          </div>
       </div>
